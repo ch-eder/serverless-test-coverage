@@ -1,0 +1,111 @@
+{
+  "nodes": [
+    {
+      "id": "scope-status-board-prod-setup",
+      "name": "setup",
+      "type": "lambdaFunction"
+    },
+    {
+      "id": "scope-status-board-prod-teardown",
+      "name": "teardown",
+      "type": "lambdaFunction"
+    },
+    {
+      "id": "api.github.com",
+      "name": "github",
+      "type": "external"
+    },
+    {
+      "id": "scope-status-board-prod-getOpenIssues",
+      "name": "getOpenIssues",
+      "type": "lambdaFunction"
+    },
+    {
+      "id": "scope-status-board-prod-getClosedIssues",
+      "name": "getClosedIssues",
+      "type": "lambdaFunction"
+    },
+    {
+      "id": "scope-status-board-prod-githubWebhookListener",
+      "name": "webhookListener",
+      "type": "lambdaFunction"
+    },
+    {
+      "id": "scope-prod-open-items",
+      "name": "openIssuesTable",
+      "type": "database"
+    },
+    {
+      "id": "scope-prod-closed-items",
+      "name": "closedIssuesTable",
+      "type": "database"
+    }
+  ],
+  "links": [
+    {
+      "source": "scope-status-board-prod-setup",
+      "target": "api.github.com",
+      "operation": "GET"
+    },
+    {
+      "source": "scope-status-board-prod-setup",
+      "target": "scope-prod-open-items",
+      "operation": "PutItem"
+    },
+    {
+      "source": "scope-status-board-prod-getOpenIssues",
+      "target": "scope-prod-open-items",
+      "operation": "Scan"
+    },
+    {
+      "source": "scope-status-board-prod-githubWebhookListener",
+      "target": "scope-prod-open-items",
+      "operation": "PutItem"
+    },
+    {
+      "source": "scope-status-board-prod-githubWebhookListener",
+      "target": "scope-prod-open-items",
+      "operation": "DeleteItem"
+    },
+    {
+      "source": "scope-status-board-prod-githubWebhookListener",
+      "target": "scope-prod-closed-items",
+      "operation": "PutItem"
+    },
+    {
+      "source": "scope-status-board-prod-githubWebhookListener",
+      "target": "scope-prod-closed-items",
+      "operation": "DeleteItem"
+    },
+    {
+      "source": "scope-status-board-prod-githubWebhookListener",
+      "target": "api.github.com",
+      "operation": "GET"
+    },
+    {
+      "source": "scope-status-board-prod-getClosedIssues",
+      "target": "scope-prod-closed-items",
+      "operation": "Scan"
+    },
+    {
+      "source": "scope-status-board-prod-teardown",
+      "target": "scope-prod-open-items",
+      "operation": "Scan"
+    },
+    {
+      "source": "scope-status-board-prod-teardown",
+      "target": "scope-prod-open-items",
+      "operation": "DeleteItem"
+    },
+    {
+      "source": "scope-status-board-prod-teardown",
+      "target": "scope-prod-closed-items",
+      "operation": "Scan"
+    },
+    {
+      "source": "scope-status-board-prod-teardown",
+      "target": "scope-prod-closed-items",
+      "operation": "DeleteItem"
+    }
+  ]
+}

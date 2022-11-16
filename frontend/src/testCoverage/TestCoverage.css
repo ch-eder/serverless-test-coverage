@@ -1,0 +1,5 @@
+span#reset.featureTop::before {
+  content: url(../icons/reset.svg);
+  margin-top: 8px;
+  margin-right: 4px;
+}

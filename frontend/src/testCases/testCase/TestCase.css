@@ -1,0 +1,30 @@
+div.testCaseName {
+  color: #a4c3b2;
+}
+
+div.runElement::before {
+  content: url(../../icons/run.svg);
+  margin-top: 8px;
+  margin-right: 4px;
+}
+
+div.delete {
+  opacity: 0.5;
+}
+
+div.delete::before {
+  content: url(../../icons/delete.svg);
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+div.description {
+  margin-top: 10px;
+  margin-bottom: 2px;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+div.responseWrapper {
+  display: none;
+}

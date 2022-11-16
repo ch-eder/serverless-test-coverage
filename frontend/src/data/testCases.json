@@ -1,0 +1,12 @@
+[
+  {
+    "name": "GetOpenIssues",
+    "method": "GET",
+    "resource": "https://pnkxikkocg.execute-api.us-east-1.amazonaws.com/prod/open"
+  },
+  {
+    "name": "GetClosedIssues",
+    "method": "GET",
+    "resource": "https://pnkxikkocg.execute-api.us-east-1.amazonaws.com/prod/closed"
+  }
+]

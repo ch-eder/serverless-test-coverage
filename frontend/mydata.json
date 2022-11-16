@@ -1,0 +1,150 @@
+{
+  "resourceSpans": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": { "stringValue": "http_get_service" }
+          },
+          {
+            "key": "telemetry.sdk.language",
+            "value": { "stringValue": "nodejs" }
+          },
+          {
+            "key": "telemetry.sdk.name",
+            "value": { "stringValue": "opentelemetry" }
+          },
+          {
+            "key": "telemetry.sdk.version",
+            "value": { "stringValue": "1.2.0" }
+          },
+          { "key": "cloud.provider", "value": { "stringValue": "aws" } },
+          { "key": "cloud.platform", "value": { "stringValue": "aws_lambda" } },
+          { "key": "cloud.region", "value": { "stringValue": "us-east-1" } },
+          { "key": "faas.name", "value": { "stringValue": "test_otel" } },
+          { "key": "faas.version", "value": { "stringValue": "$LATEST" } },
+          { "key": "process.pid", "value": { "intValue": "17" } },
+          {
+            "key": "process.executable.name",
+            "value": { "stringValue": "/var/lang/bin/node" }
+          },
+          {
+            "key": "process.command",
+            "value": { "stringValue": "/var/runtime/index.mjs" }
+          },
+          {
+            "key": "process.command_line",
+            "value": {
+              "stringValue": "/var/lang/bin/node /var/runtime/index.mjs"
+            }
+          },
+          {
+            "key": "process.runtime.version",
+            "value": { "stringValue": "16.16.0" }
+          },
+          {
+            "key": "process.runtime.name",
+            "value": { "stringValue": "nodejs" }
+          },
+          {
+            "key": "process.runtime.description",
+            "value": { "stringValue": "Node.js" }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "@opentelemetry/instrumentation-http",
+            "version": "0.28.0"
+          },
+          "spans": [
+            {
+              "traceId": "6319dbd33800b5a85e713f7222839d58",
+              "spanId": "aee221e9f79a9f0c",
+              "parentSpanId": "856ebd36df3c3205",
+              "name": "HTTPS GET",
+              "kind": "SPAN_KIND_CLIENT",
+              "startTimeUnixNano": "1662639060943011840",
+              "endTimeUnixNano": "1662639061341276928",
+              "attributes": [
+                {
+                  "key": "http.url",
+                  "value": { "stringValue": "https://reqres.in/api/users/2" }
+                },
+                { "key": "http.method", "value": { "stringValue": "GET" } },
+                {
+                  "key": "http.target",
+                  "value": { "stringValue": "/api/users/2" }
+                },
+                {
+                  "key": "net.peer.name",
+                  "value": { "stringValue": "reqres.in" }
+                },
+                {
+                  "key": "http.user_agent",
+                  "value": { "stringValue": "axios/0.27.2" }
+                },
+                {
+                  "key": "net.peer.ip",
+                  "value": { "stringValue": "104.26.10.213" }
+                },
+                { "key": "net.peer.port", "value": { "intValue": "443" } },
+                {
+                  "key": "http.host",
+                  "value": { "stringValue": "reqres.in:443" }
+                },
+                {
+                  "key": "http.response_content_length_uncompressed",
+                  "value": { "intValue": "280" }
+                },
+                { "key": "http.status_code", "value": { "intValue": "200" } },
+                { "key": "http.status_text", "value": { "stringValue": "OK" } },
+                { "key": "http.flavor", "value": { "stringValue": "1.1" } },
+                { "key": "net.transport", "value": { "stringValue": "ip_tcp" } }
+              ],
+              "status": {}
+            }
+          ]
+        },
+        {
+          "scope": {
+            "name": "@opentelemetry/instrumentation-aws-lambda",
+            "version": "0.30.0"
+          },
+          "spans": [
+            {
+              "traceId": "6319dbd33800b5a85e713f7222839d58",
+              "spanId": "856ebd36df3c3205",
+              "parentSpanId": "5af122bbb9e52913",
+              "name": "test_otel",
+              "kind": "SPAN_KIND_SERVER",
+              "startTimeUnixNano": "1662639060863596288",
+              "endTimeUnixNano": "1662639061342795520",
+              "attributes": [
+                {
+                  "key": "faas.execution",
+                  "value": {
+                    "stringValue": "347203c5-2c35-4676-95e8-74c7c2376596"
+                  }
+                },
+                {
+                  "key": "faas.id",
+                  "value": {
+                    "stringValue": "arn:aws:lambda:us-east-1:793180302321:function:test_otel"
+                  }
+                },
+                {
+                  "key": "cloud.account.id",
+                  "value": { "stringValue": "793180302321" }
+                }
+              ],
+              "status": {}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

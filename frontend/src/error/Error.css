@@ -1,0 +1,21 @@
+#error {
+  background-color: #bfb0b1;
+  padding: 15px;
+  color: #540b0e;
+  border-color: #c4afb0;
+  border-radius:10px;
+  border-width: 1px;
+  border-style: solid;
+  bottom: 5%;
+  right: 5%;
+  position: fixed;
+  font-size: smaller;
+  display: none;
+}
+
+div#error::before {
+  content: url(../icons/error.svg);
+  margin-top: 8px;
+  margin-right: 20px;
+  margin-left: 5px;
+}

@@ -1,0 +1,44 @@
+.saveElement {
+  padding: 2px 15px;
+  background-color: #6b9080;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  font-size: smaller !important;
+}
+
+div.cancel {
+  font-style: italic;
+  opacity: 0.5;
+}
+
+input[type="text"] {
+  background-color: inherit;
+  border: none;
+  color: #eaf4f4;
+  font-size: smaller;
+}
+
+input[type="text"]:focus {
+  outline: none !important;
+}
+
+input#newTestCaseResource {
+    background-color: inherit;
+    width: 100%;
+}
+
+select {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  font-size: smaller;
+}
+
+option {
+  color: #242423;
+}
+
+#postDataField {
+  display: none;
+}

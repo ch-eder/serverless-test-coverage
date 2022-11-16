@@ -1,0 +1,36 @@
+col.firstCol{
+  width: 15%;
+  text-align: left;
+  margin-left: 15px;
+}
+
+col.secondCol {
+  text-align: left;
+  margin-left: 15px;
+  width: 70%;
+}
+
+col.thirdCol {
+  width: 15%;
+}
+
+span#addTestCase.featureTop {
+  margin-right: 10px;
+}
+
+span#addTestCase.featureTop::before {
+  content: url(../icons/add.svg);
+  margin-top: 8px;
+  margin-right: 4px;
+}
+
+span#runAll.featureTop::before {
+  content: url(../icons/run.svg);
+  margin-top: 8px;
+  margin-right: 4px;
+}
+
+#addTestCaseForm {
+  display: none;
+  background-color: rgba(36, 36, 35, 0.5)
+}

@@ -1,0 +1,46 @@
+nav.sidebar {
+  margin-top: 2.5vh;
+  text-align: left;
+  padding-left: 20px;
+  position:fixed;
+}
+
+div#sidebarHeading {
+  color: #a4c3b2;
+}
+
+div#sidebarContent {
+  padding-top: 15px;
+  font-size: smaller;
+}
+
+div.sidebarElement {
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+div.sidebarElement a {
+  color: inherit;
+  text-decoration: none;
+  width: auto;
+  display: block;
+  padding: 4px 15px 4px 8px;
+}
+
+div.sidebarElement a#testCases::before {
+  content: url(../icons/testCases.svg);
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+div.sidebarElement a#testCoverage::before {
+  content: url(../icons/coverage.svg);
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+div.sidebarElement a.selected {
+  background-color: rgba(164, 195, 178, 0.12);
+  border-radius: 8px;
+  color: #a4c3b2
+}
