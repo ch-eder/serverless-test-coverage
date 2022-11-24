@@ -32,12 +32,12 @@
     },
     {
       "id": "scope-prod-open-items",
-      "name": "openIssuesTable",
+      "name": "openItemsTable",
       "type": "database"
     },
     {
       "id": "scope-prod-closed-items",
-      "name": "closedIssuesTable",
+      "name": "closedItemsTable",
       "type": "database"
     }
   ],
